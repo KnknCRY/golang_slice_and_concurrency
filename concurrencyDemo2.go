@@ -12,6 +12,7 @@ func concurrencyDemo2() {
 		// for i:=0;i<10000;i++ {
 		// 	channel <- 10
 		// }
+		time.Sleep(2 * time.Second)
 		channel <- 10
 		time.Sleep(2 * time.Second)
 		channel <- 20
@@ -20,8 +21,9 @@ func concurrencyDemo2() {
 		defer close(ch)
 	}(ch)
 
+	// 這個for會被卡住，等ch有數值才會動
+	// go很聰明，當ch將不再有數值被丟入，就會離開這個for
 	for i := range ch {
 		fmt.Println(i)
 	}
-
 }
