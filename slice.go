@@ -76,7 +76,7 @@ func sliceDemo3() {
 func sliceDemo4() {
 	// a b是不同slice但指向同一個underlying array
 	a := []int{1, 2, 3} // create a new slice and point to a new underlying array
-	b := a[1:2]         // create a new slice but point to the same underlying array
+	b := a[1:2]         // create a new slice but point to the underlying array of a
 	a[1] = 8
 	fmt.Println(len(a), cap(a), a)
 	fmt.Println(len(b), cap(b), b)
@@ -103,7 +103,7 @@ func sliceDemo5() {
 	// 5 5 [0 0 8 0 0]
 }
 
-// slice伸縮概念
+// slice伸縮概念，但沒事不要用伸縮，用append就好
 func sliceDemo6() {
 	a := make([]int, 3, 5)
 	a[2] = 8

@@ -1,8 +1,8 @@
 package main
 
 func main() {
-	// concurrencyDemo1()
-	concurrencyDemo2()
+	// concurrencyDemo1() //不知道為什麼會deadlock...
+	// concurrencyDemo2()
 
 	// sliceDemo1()
 	// sliceDemo2()
@@ -10,4 +10,7 @@ func main() {
 	// sliceDemo4()
 	// sliceDemo5()
 	// sliceDemo6()
+
+	// chDemo1()
+
 }

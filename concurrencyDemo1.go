@@ -45,7 +45,3 @@ func concurrencyDemo1() {
 	go sendLotsOfWork(in)
 	getLotsOfWork(out)
 }
-
-// func main() {
-// 	run()
-// }
